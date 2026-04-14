@@ -142,7 +142,7 @@
       "width": 1920,
       "height": 1080,
       "id": 23,
-      "file_name": "23.PNG"
+      "file_name": "23.png"
     },
     {
       "width": 1920,
@@ -194,13 +194,25 @@
     },
     {
       "id": 32,
-      "file_name": "32.jpg",
+      "file_name": "32.png",
       "width": 1920,
       "height": 1080
     },
     {
       "id": 33,
       "file_name": "33.png",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": 34,
+      "file_name": "34.png",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": 35,
+      "file_name": "35.png",
       "width": 1920,
       "height": 1080
     }
@@ -578,6 +590,16 @@
     {
       "id": 90,
       "name": "keyboard",
+      "supercategory": ""
+    },
+    {
+      "id": 91,
+      "name": "mahjong_matching_en",
+      "supercategory": ""
+    },
+    {
+      "id": 92,
+      "name": "accept_en",
       "supercategory": ""
     }
   ],
@@ -1925,6 +1947,32 @@
         119
       ],
       "area": 8330,
+      "iscrowd": 0
+    },
+    {
+      "id": 91,
+      "image_id": 34,
+      "category_id": 91,
+      "bbox": [
+        1572,
+        15,
+        138,
+        36
+      ],
+      "area": 4968,
+      "iscrowd": 0
+    },
+    {
+      "id": 92,
+      "image_id": 35,
+      "category_id": 92,
+      "bbox": [
+        1666,
+        922,
+        96,
+        16
+      ],
+      "area": 1536,
       "iscrowd": 0
     }
   ],
