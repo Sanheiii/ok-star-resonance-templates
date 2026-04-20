@@ -205,20 +205,26 @@
       "height": 1080
     },
     {
-      "id": 35,
+      "id": 34,
       "file_name": "34.png",
       "width": 1920,
       "height": 1080
     },
     {
-      "id": 36,
+      "id": 35,
       "file_name": "35.png",
       "width": 1920,
       "height": 1080
     },
     {
-      "id": 37,
+      "id": 36,
       "file_name": "36.png",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": 37,
+      "file_name": "37.png",
       "width": 1920,
       "height": 1080
     }
@@ -637,6 +643,11 @@
     {
       "id": 98,
       "name": "maj_east_jp",
+      "supercategory": ""
+    },
+    {
+      "id": 99,
+      "name": "confirm_jp",
       "supercategory": ""
     }
   ],
@@ -2082,6 +2093,19 @@
         32
       ],
       "area": 1024,
+      "iscrowd": 0
+    },
+    {
+      "id": 99,
+      "image_id": 34,
+      "category_id": 99,
+      "bbox": [
+        941,
+        981,
+        39,
+        22
+      ],
+      "area": 858,
       "iscrowd": 0
     }
   ],

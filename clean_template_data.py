@@ -1,5 +1,7 @@
 import os
 import json
+import uuid
+import shutil
 from PIL import Image
 import numpy as np
 
@@ -20,6 +22,11 @@ def process_coco_dataset(work_dir):
 
     padding = 2
 
+    temp_dir_name = f"temp_{uuid.uuid4().hex}"
+    temp_dir_path = os.path.join(work_dir, temp_dir_name)
+    os.makedirs(temp_dir_path, exist_ok=True)
+    print(f"创建临时处理目录: {temp_dir_name}")
+
     for index, img_info in enumerate(coco_data['images']):
         old_filename = img_info['file_name']
         old_filepath = os.path.join(work_dir, old_filename)
@@ -30,7 +37,7 @@ def process_coco_dataset(work_dir):
             target_ext = '.png'
 
         new_filename = f"{index}{target_ext}"
-        new_filepath = os.path.join(work_dir, new_filename)
+        new_filepath = os.path.join(temp_dir_path, new_filename)
 
         img_info['file_name'] = new_filename
 
@@ -65,13 +72,23 @@ def process_coco_dataset(work_dir):
 
             img.save(new_filepath)
 
-            if os.path.abspath(old_filepath) != os.path.abspath(new_filepath) and os.path.exists(old_filepath):
+            if os.path.exists(old_filepath):
                 os.remove(old_filepath)
 
             print(f"完成: {old_filename} -> {new_filename}")
 
         except Exception as e:
             print(f"错误 {old_filename}: {e}")
+
+    print("开文件移出临时目录...")
+    for temp_file in os.listdir(temp_dir_path):
+        src_path = os.path.join(temp_dir_path, temp_file)
+        dst_path = os.path.join(work_dir, temp_file)
+        shutil.move(src_path, dst_path)
+    
+    # 删除空的临时目录
+    os.rmdir(temp_dir_path)
+    print(f"已清理临时目录: {temp_dir_name}")
 
     with open(json_path, 'w', encoding='utf-8') as f:
         json.dump(coco_data, f, ensure_ascii=False, indent=2)
