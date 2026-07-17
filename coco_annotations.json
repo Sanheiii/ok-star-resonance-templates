@@ -227,6 +227,24 @@
       "file_name": "37.png",
       "width": 1920,
       "height": 1080
+    },
+    {
+      "id": 38,
+      "file_name": "38.png",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": 39,
+      "file_name": "39.png",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": 40,
+      "file_name": "40.png",
+      "width": 1920,
+      "height": 1080
     }
   ],
   "categories": [
@@ -650,6 +668,21 @@
     {
       "id": 99,
       "name": "confirm_jp",
+      "supercategory": ""
+    },
+    {
+      "id": 100,
+      "name": "escape",
+      "supercategory": ""
+    },
+    {
+      "id": 101,
+      "name": "menu_icon",
+      "supercategory": ""
+    },
+    {
+      "id": 102,
+      "name": "close",
       "supercategory": ""
     }
   ],
@@ -2018,6 +2051,45 @@
         22
       ],
       "area": 858,
+      "iscrowd": 0
+    },
+    {
+      "id": 100,
+      "image_id": 38,
+      "category_id": 100,
+      "bbox": [
+        33,
+        35,
+        29,
+        28
+      ],
+      "area": 812,
+      "iscrowd": 0
+    },
+    {
+      "id": 101,
+      "image_id": 39,
+      "category_id": 101,
+      "bbox": [
+        1817,
+        1021,
+        18,
+        18
+      ],
+      "area": 324,
+      "iscrowd": 0
+    },
+    {
+      "id": 102,
+      "image_id": 40,
+      "category_id": 102,
+      "bbox": [
+        1848,
+        39,
+        25,
+        24
+      ],
+      "area": 600,
       "iscrowd": 0
     }
   ],
